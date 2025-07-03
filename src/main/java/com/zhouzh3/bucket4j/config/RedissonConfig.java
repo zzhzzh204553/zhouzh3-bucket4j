@@ -37,8 +37,8 @@ public class RedissonConfig {
     private static final int CONNECTION_MINIMUM_IDLE_SIZE = 24;
     private static final int CONNECT_TIMEOUT = 10000;
     private static final int SOCKET_TIMEOUT = 3000;
-    private static final int THREADS = 16;
-    private static final int NETTY_THREADS = 32;
+    private static final int REDISSON_THREADS = 16;
+    private static final int REDISSON_NETTY_THREADS = 32;
 
 
     private final RedisProperties redisProperties;
@@ -59,9 +59,9 @@ public class RedissonConfig {
 
         // 基础配置
         /*处理Redis事件的线程数*/
-        config.setThreads(THREADS)
+        config.setThreads(REDISSON_THREADS)
                 /*Netty线程数*/
-                .setNettyThreads(NETTY_THREADS)
+                .setNettyThreads(REDISSON_NETTY_THREADS)
                 .setCodec(new org.redisson.codec.JsonJacksonCodec());
 
         // 根据模式配置不同连接方式

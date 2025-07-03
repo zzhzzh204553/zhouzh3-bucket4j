@@ -22,7 +22,6 @@
 
         <!-- 为每个组件指定独立版本 -->
         <bucket4j.version>8.14.0</bucket4j.version>
-        <!--        <bucket4j.boot.starter.version>0.12.10</bucket4j.boot.starter.version>-->
         <redisson.starter.version>3.50.0</redisson.starter.version>
         <hutool.version>5.8.38</hutool.version>
 
